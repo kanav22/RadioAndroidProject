@@ -1,0 +1,32 @@
+package com.wadhawan.radioandroidproject.model
+
+data class ResponseItem(
+    val bitrate: Int,
+    val checkuuid: String,
+    val codec: String,
+    val countrycode: Any,
+    val countrysubdivisioncode: Any,
+    val description: String,
+    val do_not_index: Any,
+    val favicon: Any,
+    val geo_lat: Any,
+    val geo_long: Any,
+    val hls: Int,
+    val homepage: String,
+    val languagecodes: String,
+    val loadbalancer: Any,
+    val metainfo_overrides_database: Int,
+    val name: String,
+    val ok: Int,
+    val `public`: Int,
+    val sampling: Int,
+    val server_software: String,
+    val source: String,
+    val ssl_error: Int,
+    val stationuuid: String,
+    val tags: String,
+    val timestamp: String,
+    val timestamp_iso8601: String,
+    val timing_ms: Int,
+    val urlcache: String
+)

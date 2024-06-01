@@ -1,6 +1,7 @@
 package com.wadhawan.radioandroidproject.data.network.api
 
 import com.wadhawan.radioandroidproject.model.RadioStation
+import com.wadhawan.radioandroidproject.model.Response
 import com.wadhawan.radioandroidproject.model.StationStatus
 import retrofit2.http.GET
 import retrofit2.http.Path
@@ -30,5 +31,5 @@ interface RadioApiService {
      * @throws [Exception] if network request fails or the server responds with an error.
      */
     @GET("checks/{stationuuid}")
-    suspend fun checkStationAvailability(@Path("stationuuid") stationUuid: String): StationStatus
+    suspend fun checkStationAvailability(@Path("stationuuid") stationUuid: String): Response
 }

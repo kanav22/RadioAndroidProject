@@ -1,5 +1,7 @@
 package com.wadhawan.radioandroidproject.model
 
+import com.google.gson.annotations.SerializedName
+
 /**
  * Data class representing a radio station with its name, URL, and unique identifier (UUID).
  */
@@ -14,5 +16,6 @@ data class RadioStation(
  * It contains a single boolean property `is_online` indicating whether the station is currently broadcasting.
  */
 data class StationStatus(
-    val is_online: Boolean
+    @SerializedName("ok") val isOnline: Boolean,
+    val message: String
 )
