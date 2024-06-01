@@ -1,5 +1,8 @@
 # Radio Station Checker App
 
+<img width="414" alt="Screenshot 2024-06-01 at 6 54 29 PM" src="https://github.com/kanav22/RadioAndroidProject/assets/5936688/3e4c10c8-9eac-45d4-a9cf-06aa5a5b1794">
+
+
 This Android application allows users to view a list of radio stations and check their current availability (online/offline). It leverages modern Android development tools, including Jetpack Compose for the UI, ViewModel for managing UI-related data in a lifecycle-conscious way, and Retrofit for making network requests.
 
 ## Features
@@ -81,3 +84,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](https://gi
 ---
 
 This README template provides a comprehensive overview that you can adapt based on the specifics of your project, such as actual links to CONTRIBUTING and LICENSE files, your GitHub username, and any additional details or dependencies your project might have.
+
+
