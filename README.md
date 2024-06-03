@@ -60,6 +60,11 @@ The application follows the **MVVM (Model-View-ViewModel)** architecture. Here i
 - **View**: Defined by composables in Jetpack Compose.
 - **ViewModel**: Holds the logic for fetching data from the network and managing UI-related data.
 - **Model**: Represents the structure of the radio stations and the responses from the API.
+- Integrating Hilt
+Hilt is used for dependency injection in the project to provide a robust, scalable, and maintainable structure. It helps in reducing the boilerplate code associated with manual dependency management and ensures compile-time correctness of dependencies. Here’s how Hilt integrates:
+
+Hilt Setup: Configured in the application's build environment and annotated in the Application class to kick-start dependency injection.
+Injecting Dependencies: Services like RadioApiService are injected into ViewModels and other components needing these services, demonstrating a clean and decoupled architecture.
 
 ## Testing
 
