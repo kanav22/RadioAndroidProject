@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Box
+import androidx.hilt.navigation.compose.hiltViewModel
 
 
 import androidx.compose.foundation.layout.Column
@@ -21,8 +22,8 @@ import androidx.compose.foundation.lazy.LazyListState
 import androidx.compose.foundation.lazy.items
 import androidx.compose.foundation.lazy.rememberLazyListState
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.SignalCellular4Bar
-import androidx.compose.material.icons.filled.SignalCellularConnectedNoInternet4Bar
+import androidx.compose.material.icons.filled.Close
+import androidx.compose.material.icons.outlined.LocationOn
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
@@ -84,7 +85,7 @@ fun AppTheme(content: @Composable () -> Unit) {
 
 @Composable
 fun RadioStationListScreen() {
-    val viewModel: RadioViewModel = viewModel() // Retrieving the ViewModel instance
+    val viewModel: RadioViewModel = hiltViewModel() // Retrieving the ViewModel instance
 
         Box(modifier = Modifier.padding(16.dp)) {
             // Displays the list of radio stations
@@ -141,7 +142,7 @@ fun RadioStationItem(station: RadioStation, viewModel: RadioViewModel, listState
         ) {
             // Icon representing the station's online/offline status
             Icon(
-                imageVector = if (viewModel.availability[station.stationuuid] == 1) Icons.Filled.SignalCellular4Bar else Icons.Filled.SignalCellularConnectedNoInternet4Bar,
+                imageVector = if (viewModel.availability[station.stationuuid] == 1) Icons.Outlined.LocationOn else Icons.Filled.Close,
                 contentDescription = if (viewModel.availability[station.stationuuid] == 1) "Online" else "Offline",
                 tint = if (viewModel.availability[station.stationuuid] == 1) Color.Green else Color.Red,
                 modifier = Modifier.size(40.dp)

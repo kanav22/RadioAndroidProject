@@ -7,6 +7,12 @@ android {
     namespace = "com.wadhawan.radioandroidproject"
     compileSdk = 34
 
+    packagingOptions {
+        // Exclude the problematic file from all JARs\
+
+        exclude ("META-INF/gradle/incremental.annotation.processors")
+    }
+
     defaultConfig {
         applicationId = "com.wadhawan.radioandroidproject"
         minSdk = 24
@@ -67,7 +73,13 @@ dependencies {
     implementation (libs.logging.interceptor)
     implementation (libs.androidx.runtime.livedata)
     implementation (libs.androidx.material.icons.core)
-    implementation (libs.androidx.material.icons.extended)
+
+    implementation ("com.google.dagger:hilt-android:2.38.1")
+    implementation( "com.google.dagger:hilt-android-compiler:2.38.1")
+    implementation ("androidx.hilt:hilt-lifecycle-viewmodel:1.0.0-alpha03")
+    implementation("androidx.hilt:hilt-compiler:1.0.0")
+    // Hilt integration with Jetpack Compose
+    implementation ("androidx.hilt:hilt-navigation-compose:1.0.0")
     // ViewModel and LiveData
     implementation (libs.androidx.lifecycle.viewmodel.ktx)
     implementation (libs.androidx.lifecycle.livedata.ktx)
@@ -81,6 +93,7 @@ dependencies {
     testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.6.0")
     androidTestImplementation ("org.mockito:mockito-core:4.0.0")
     testImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
+    androidTestImplementation("org.mockito.kotlin:mockito-kotlin:4.0.0")
     androidTestImplementation ("androidx.arch.core:core-testing:2.1.0")
    testImplementation ("androidx.arch.core:core-testing:2.1.0")
     // AndroidX Test - Instrumentation tests

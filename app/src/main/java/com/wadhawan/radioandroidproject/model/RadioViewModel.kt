@@ -10,8 +10,9 @@ import com.wadhawan.radioandroidproject.data.network.NetworkModule
 import com.wadhawan.radioandroidproject.data.network.api.RadioApiService
 import kotlinx.coroutines.launch
 import java.util.concurrent.TimeUnit
+import javax.inject.Inject
 
-open class RadioViewModel(private val apiService: RadioApiService = NetworkModule.apiService) : ViewModel() {
+class RadioViewModel @Inject constructor(private val apiService: RadioApiService = NetworkModule.provideRadioApiService()) : ViewModel() {
     var stations = mutableStateListOf<RadioStation>()
     var availability = mutableStateMapOf<String, Int>()
     var isLoading = mutableStateOf(true)

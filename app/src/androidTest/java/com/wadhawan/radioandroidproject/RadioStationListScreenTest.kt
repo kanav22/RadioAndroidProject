@@ -23,7 +23,7 @@ class RadioStationListScreenTest {
     fun setup() {
         // Mock the ViewModel or use a fake
 
-        whenever(viewModel.stations).thenReturn(listOf(RadioStation("1", "101.1 RADIO TURKEY FM", "url", "uuid1")))
+        whenever(viewModel.stations).thenReturn(listOf(RadioStation("1", "101.1 RADIO TURKEY FM",  "uuid1")) as SnapshotStateList<RadioStation>?)
         viewModel = mock(RadioViewModel::class.java).apply {
             // Assuming `stations` is a LiveData or StateFlow you might need to set its value
             whenever(stations).thenReturn(listOf(RadioStation(
