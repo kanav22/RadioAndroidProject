@@ -52,6 +52,7 @@ git clone https://github.com/kanav22/RadioAndroidProject.git
 - **ViewModel** - Manages UI-related data in a lifecycle-conscious way.
 - **LiveData** - Lifecycle-aware data holder class.
 - **Retrofit** - Type-safe HTTP client for Android and Java.
+- Hilt - Dependency Injection
 
 ## Architecture
 
